@@ -1,0 +1,74 @@
+
+section.health {
+  display: grid;
+  min-height: 100vh;
+  grid-gap: 1rem;
+  grid-template-columns: 1rem repeat(9, 1fr) 1rem;
+  grid-template-rows: 1rem 6rem repeat(3, 1fr) 1rem;
+}
+
+section.health .split-wrapper {
+  grid-area: 2 / 2 / 2 / 7;
+}
+
+section.health .split-wrapper .head {
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -8px;
+  color: var(--secondary);
+}
+
+section.health .content {
+  font-size: calc(1rem + 2vw);
+  line-height: 1;
+}
+
+section.health .content-1 {
+  grid-area: 3 / 3 / 3 / 9;
+}
+
+section.health .content-2 {
+  grid-area: 4 / 5 / 4 / 11;
+}
+
+section.health .content-3 {
+  grid-area: 5 / 2 / 5 / 8;
+}
+
+
+@media screen and (max-width: 960px) {
+  section.health {
+    grid-gap: 0;
+    margin-bottom: 12.5vh;
+  }
+
+  section.health .split-wrapper {
+    grid-area: 2 / 2 / 2 / 12;
+  }
+
+  section.health .split-wrapper .head {
+    font-size: 5rem;
+    letter-spacing: -5px;
+  }
+
+  section.health .content {
+    line-height: 1.1;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  section.health .content-1 {
+    grid-area: 3 / 2 / 3 / 12;
+  }
+
+  section.health .content-2 {
+    grid-area: 4 / 2 / 4 / 12;
+  }
+
+  section.health .content-3 {
+    grid-area: 5 / 2 / 5 / 12;
+  }
+
+}
