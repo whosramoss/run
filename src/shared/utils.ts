@@ -2,7 +2,7 @@ import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import ms from "ms";
 
-export const ASSET_SUSNSET = "/images/venice_sunset_1k.hdr.jpg";
+export const SCROLL_CONTENT_ID = "scroll-content";
 
 export const capitalize = (str: string) => {
   if (!str || typeof str !== "string") return str;

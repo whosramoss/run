@@ -1,14 +1,14 @@
 const isLocalMetadata = true;
-const META_URL = "https://github.com/whosramoss/nt3/";
+const META_URL = "https://github.com/whosramoss/run/";
 
 export const META_IMAGE_PATH = isLocalMetadata ? './' : META_URL;
 
-export const META_NAME = "NT3 - NextJs Boilerplate";
-const META_DESCRIPTION = `Next.Js Boilerplate to creative projects`;
+const META_DESCRIPTION = `Running frees the mind`;
 const META_LOCALE = "en";
 
+export const META_NAME = `RUN - ${META_DESCRIPTION}`;
 const META_SITENAME = META_URL;
-const META_THUMBNAIL = `${META_URL}tree/main/public/nt3-thumbnail.png`;
+const META_THUMBNAIL = `${META_URL}tree/main/public/run-thumbnail.png`;
 const META_BASE = isLocalMetadata ? "http://localhost:3000/" : META_URL;
 
 const openDefaultMetada = {
@@ -17,11 +17,11 @@ const openDefaultMetada = {
     applicationName: META_NAME,
     description: META_DESCRIPTION,
     generator: "Next.JS",
-    category: "coding",
+    category: "run",
     keywords: [
-      "code",
-      "creative",
-      "effects",
+      "run",
+      "motivation",
+      "health",
     ],
     alternates: {
       canonical: META_URL,
