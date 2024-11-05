@@ -1,0 +1,54 @@
+
+nav {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1rem calc(12.5vw - 1rem) 1fr calc(12.5vw - 1rem) 1rem;
+  grid-template-rows: 1rem repeat(2, 10vh);
+  grid-template-areas: ". . . . ." ". health brand time ." ". . . . . ";
+}
+
+nav .brand,
+nav .date,
+nav .health {
+  backdrop-filter: blur(5px);
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: 1.5rem;
+  border: 2px solid black;
+  border-right: 0;
+
+}
+
+nav .brand {
+  justify-content: center;
+  text-align: center;
+  grid-area: brand;
+  letter-spacing: -2px;
+  font-size: 3rem;
+  font-weight: 800;
+  color:var(--secondary)
+}
+
+nav .date {
+  grid-area: time;
+  justify-content: center;
+  border-right: 2px solid black;
+}
+
+nav .health {
+  grid-area: health;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 960px) {
+  nav .date,
+  nav .health {
+    display: none;
+  }
+}
