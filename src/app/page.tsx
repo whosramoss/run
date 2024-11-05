@@ -1,24 +1,21 @@
 "use client"
-import React, { useEffect } from "react";
-import { isMobile } from "react-device-detect";
-import useTimer from "@hooks/useTimer";
-import useTextEffect from "@hooks/useTextEffect";
-import useScrollHover from "@hooks/useScrollHover";
+import React from "react";
 import { SCROLL_CONTENT_ID } from "@shared/utils";
 import NavBar from "@components/NavBar";
 import Hero from "@components/Hero";
 import Motivation from "@components/Motivation";
 import Health from "@components/Health";
 import Footer from "@components/Footer";
+import useTextScrollEffect from "@hooks/useTextScrollEffect";
+
 
 export default function HomePage() {
 
-  useEffect(() => {
-    useTextEffect();
-    if (isMobile) return;
-    useScrollHover()
-    useTimer();
-  });
+  const { canRun, run } = useTextScrollEffect()
+
+  if (canRun) {
+    run();
+  }
 
   return (
     <div className="scroll-wrapper">
