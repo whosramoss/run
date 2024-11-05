@@ -3,8 +3,8 @@ import { MetadataRoute } from 'next';
 export default function manifest(): MetadataRoute.Manifest {
     return {
 
-        name: 'nt3',
-        short_name: 'nt3',
+        name: 'run',
+        short_name: 'run',
         display: 'standalone',
         background_color: '#FFFFFF',
         theme_color: '#FFFFFF',
