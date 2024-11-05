@@ -1,0 +1,76 @@
+
+main .hero {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 20vh;
+  display: grid;
+  grid-template-columns: 1rem repeat(10, 1fr) 1rem;
+  grid-template-rows: 1rem repeat(9, 10%) 1rem;
+}
+
+main .hero .content {
+  grid-area: 3 / 2 / 8 / 9;
+  font-size: calc(1rem + 2vw);
+  line-height: 1;
+  z-index: 1;
+}
+
+main .hero .content .head {
+  line-height: 0.8;
+  font-size: 6rem;
+  letter-spacing: -7px;
+  color: var(--secondary);
+}
+
+main .hero .content .last {
+  margin-bottom: 2rem;
+}
+
+main .hero .content .cta {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+main .hero .desc {
+  grid-area: 9/4/11/11;
+  z-index: 2;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+main .hero .image-container {
+  grid-area: 2 / 6 / 9 / 12;
+  margin-top: 10%;
+  z-index: 0;
+}
+
+main .hero .image-container img {
+  margin-top: -10%;
+}
+
+main .hero .image-container video {
+  margin-top: -10%;
+}
+
+
+
+@media screen and (max-width: 960px) {
+  main .hero {
+    margin-bottom: 12.5vh;
+  }
+  
+  main .hero .content {
+    grid-area: 6 / 2 / 11 / 12;
+    font-size: 1.15rem;
+  }
+
+  main .hero .content .head {
+    font-size: 4rem;
+    letter-spacing: -5px;
+  }
+
+  main .hero .desc {
+    display: none;
+  }
+
+}
