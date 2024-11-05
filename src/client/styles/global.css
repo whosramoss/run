@@ -4,31 +4,143 @@
 
 @layer base {
   :root {
-    --primary:#ffffff;
-    --secondary: #f4f4f4;
-    --third: #262626;
-    --black:#161616;
-  }
-
-  .dark {
-    --primary:  #161616; 
-    --secondary: #262626;
-    --third: #f4f4f4;
-    --black:#ffffff;
+    font-size: 1rem;
+    line-height: calc(2px + 1.1rem + 2px);
+    scroll-behavior: smooth;
+    color: #000;
+    text-rendering: optimizeLegibility;
+    cursor: default;
+    --primary: #E5E5E5;
+    --secondary: #2945ff;
+    --third: #045c14;
+    --black:#000;
   }
 }
 
 @layer base {
   html {
     @apply font-medium;
-    font-family: Neue Montreal;
   }
 
   body {
-    @apply overflow-x-hidden;
+    @apply overflow-x-hidden max-w-[100vw] bg-primary;
   }
 }
 
+*,
+*::after,
+*::before {
+  @apply box-border m-0 p-0;
+}
+
+
 ::-webkit-scrollbar {
-  width: 0px ;
+  display: none;
+}
+
+
+::selection {
+  @apply text-primary bg-black;
+}
+
+
+
+.scroll-wrapper {
+  height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-y: hidden;
+  position: fixed;
+  left: 0;
+}
+
+.scroll-wrapper .scroll-content {
+  will-change: transform;
+}
+
+.image-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  height: auto;
+  width: 100%;
+}
+
+.image-container video {
+  height: auto;
+  width: 100%;
+}
+
+.image-container h3 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+.image-container p {
+  margin-top: 0.5rem;
+}
+
+.image-container button {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.visible {
+  transform: translateY(0) skewY(0) !important;
+}
+
+.strong {
+  color: rgba(42, 69, 255, 1);
+}
+
+.cursor {
+  height: 96px;
+  width: 96px;
+  z-index: 99999;
+  background: var(--secondary);
+  position: fixed;
+  border-radius: 50%;
+  will-change: transform;
+  pointer-events: none;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.cursor::after {
+  position: absolute;
+  content: "run";
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.cursor.hover {
+  background-color: black !important;
+}
+
+.cursor.hover::after {
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 960px) {
+  .scroll-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow-y: auto;
+  }
+
+  .scroll-wrapper .scroll-content {
+    will-change: none;
+  }
+  .cursor {
+    display: none;
+  }
 }
