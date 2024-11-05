@@ -1,5 +1,5 @@
 const isLocalMetadata = true;
-const META_URL = "https://github.com/whosramoss/run/";
+const META_URL = "https://run.whosramoss.com/";
 
 export const META_IMAGE_PATH = isLocalMetadata ? './' : META_URL;
 
