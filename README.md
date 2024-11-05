@@ -4,7 +4,7 @@
 </a>
 
 <p align="center">
-  Running frees the mind
+  Educational microsite focused on the benefits of running.
 </p>
 
 <div align="center">
