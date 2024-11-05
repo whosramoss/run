@@ -1,0 +1,14 @@
+.split-wrapper {
+  overflow: hidden;
+  display: block;
+  line-height: 1.2;
+}
+
+.split-wrapper .split-line {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.85);
+  position: relative;
+  transform: translateY(150%) skewY(3deg);
+  transition: transform 0.85s cubic-bezier(0.03, -0.11, 0, 0.98);
+  will-change: transform;
+}
