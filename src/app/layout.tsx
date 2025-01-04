@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { baseMetadata } from "@shared/meta";
-import { fontQuestrial } from "@shared/fonts";
+import { baseMetadata } from "src/utils/meta";
+import { fontQuestrial } from "src/utils/fonts";
 import "@styles/global.css";
 
 export const metadata: Metadata = baseMetadata;

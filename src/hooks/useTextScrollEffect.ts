@@ -1,6 +1,6 @@
-import { Hover } from "@shared/js/hover";
-import { Observer } from "@shared/js/observe";
-import { Scroller } from "@shared/js/scroller";
+import { Hover } from "@utils/js/hover";
+import { Observer } from "@utils/js/observe";
+import { Scroller } from "@utils/js/scroller";
 import { useEffect } from "react";
 import { isMobile } from "react-device-detect";
 

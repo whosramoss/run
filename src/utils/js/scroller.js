@@ -1,4 +1,4 @@
-import { lerp, SCROLL_CONTENT_ID } from "@shared/utils";
+import { lerp, SCROLL_CONTENT_ID } from "@utils/utils";
 import { Observer } from "./observe";
 
 export class Scroller {

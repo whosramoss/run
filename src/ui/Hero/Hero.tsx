@@ -1,4 +1,4 @@
-import SplitWrapper from "@components/SplitWrapper";
+import SplitWrapper from "@ui/SplitWrapper";
 import "./Hero.css";
 
 interface HeroProps {

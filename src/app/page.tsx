@@ -1,11 +1,11 @@
 "use client"
 import React from "react";
-import { SCROLL_CONTENT_ID } from "@shared/utils";
-import NavBar from "@components/NavBar";
-import Hero from "@components/Hero";
-import Motivation from "@components/Motivation";
-import Health from "@components/Health";
-import Footer from "@components/Footer";
+import { SCROLL_CONTENT_ID } from "@utils/utils";
+import NavBar from "@ui/NavBar";
+import Hero from "@ui/Hero";
+import Motivation from "@ui/Motivation";
+import Health from "@ui/Health";
+import Footer from "@ui/Footer";
 import useTextScrollEffect from "@hooks/useTextScrollEffect";
 
 

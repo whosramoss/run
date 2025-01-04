@@ -1,4 +1,4 @@
-import { lerp } from "@shared/utils";
+import { lerp } from "@utils/utils";
 import { Observer } from "./observe";
 
 export class Hover {

@@ -23,26 +23,29 @@
     ],
     "baseUrl": "./",
     "paths": {
-      "@styles/*": [
-        "src/client/styles/*"
-      ],
-      "@components/*": [
-        "src/client/components/*"
+      "@app/*": [
+        "src/app/*"
       ],
       "@hooks/*": [
-        "src/client/hooks/*"
+        "src/hooks/*"
+      ],
+      "@models/*": [
+        "src/models/*"
       ],
       "@providers/*": [
-        "src/client/providers/*"
+        "src/providers/*"
       ],
-      "@schemas/*": [
-        "src/server/schemas/*"
+      "@styles/*": [
+        "src/styles/*"
       ],
-      "@services/*": [
-        "src/server/services/*"
+      "@ui/*": [
+        "src/ui/*"
       ],
-      "@shared/*": [
-        "src/shared/*"
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@server/*": [
+        "server/*"
       ]
     }
   },
@@ -51,7 +54,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "build/types/**/*.ts",
+    "build/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
