@@ -1,3 +1,10 @@
+@import url('./Footer');
+@import url('./Health');
+@import url('./Hero');
+@import url('./Motivation');
+@import url('./NavBar');
+@import url('./SplitWrapper');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,9 +29,6 @@
     @apply font-medium;
   }
 
-  body {
-    @apply overflow-x-hidden max-w-[100vw] bg-primary;
-  }
 }
 
 *,

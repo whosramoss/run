@@ -1,5 +1,4 @@
 import React from 'react';
-import './SplitWrapper.css';
 
 interface SplitWrapperProps {
   text: string;

@@ -1,5 +1,4 @@
 import SplitWrapper from "@ui/SplitWrapper";
-import "./Hero.css";
 
 interface HeroProps {
   title: string[],

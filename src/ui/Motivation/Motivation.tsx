@@ -1,5 +1,5 @@
 import SplitWrapper from "@ui/SplitWrapper";
-import "./Motivation.css";
+
 interface MotivationProps {
   title: string;
   lst: {

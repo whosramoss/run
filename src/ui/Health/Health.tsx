@@ -1,5 +1,4 @@
 import SplitWrapper from "@ui/SplitWrapper";
-import './Health.css';
 
 interface HealthProps {
   title: string;

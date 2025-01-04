@@ -1,5 +1,4 @@
 import useTimerEffect from "@hooks/useTimerEffect";
-import "./Navbar.css";
 
 export function NavBar() {
 

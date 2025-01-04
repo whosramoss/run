@@ -27,3 +27,8 @@ export const timeAgo = (timestamp: Date, timeOnly?: boolean): string => {
 export const lerp = (start: number, end: number, amt: number) => {
   return (1 - amt) * start + amt * end;
 };
+
+export interface CommonsProps {
+  className?: string;
+  children?: React.ReactNode;
+}

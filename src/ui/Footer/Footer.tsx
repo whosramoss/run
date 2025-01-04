@@ -1,6 +1,4 @@
 import Link from "next/link";
-import "./Footer.css";
-
 
 interface FooterProps {
   name: string;
