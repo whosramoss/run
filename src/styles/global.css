@@ -1,9 +1,8 @@
-@import url("./Footer");
-@import url("./Health");
-@import url("./Hero");
-@import url("./Motivation");
-@import url("./NavBar");
-@import url("./SplitWrapper");
+@import url("./_footer");
+@import url("./_navbar");
+@import url("./_section-health");
+@import url("./_section-hero");
+@import url("./_section-motivation");
 
 @tailwind base;
 @tailwind components;
@@ -42,19 +41,6 @@
 
 ::selection {
   @apply bg-black text-primary;
-}
-
-.scroll-wrapper {
-  height: 100vh;
-  width: 100%;
-  max-width: 100vw;
-  overflow-y: hidden;
-  position: fixed;
-  left: 0;
-}
-
-.scroll-wrapper .scroll-content {
-  will-change: transform;
 }
 
 .image-container {
@@ -128,16 +114,6 @@
 }
 
 @media screen and (max-width: 960px) {
-  .scroll-wrapper {
-    min-height: 100vh;
-    width: 100%;
-    max-width: 100vw;
-    overflow-y: auto;
-  }
-
-  .scroll-wrapper .scroll-content {
-    will-change: none;
-  }
   .cursor {
     display: none;
   }

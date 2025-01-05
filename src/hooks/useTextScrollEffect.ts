@@ -1,30 +1,31 @@
 import { Hover } from "@utils/js/hover";
 import { Observer } from "@utils/js/observe";
 import { Scroller } from "@utils/js/scroller";
+import { msDelay, WRAPPER_TEXT_SPLIT } from "@utils/utils";
 import { useEffect } from "react";
 import { isMobile } from "react-device-detect";
 
 export const useTextScrollEffect = () => {
-  const canRun = typeof window !== "undefined" && window.IntersectionObserver;
+  const textScroll = typeof window !== "undefined" && window.IntersectionObserver;
 
-  function run() {
+  function setTextScroll() {
     setTimeout(() => {
-      setTextEffect();
+      updateTextEffect();
       if (isMobile) return;
-      setScrollHoverEffect();
-    }, 1000);
+      updateScrollHoverEffect();
+    }, msDelay);
   }
 
   useEffect(() => {
-    if (canRun) {
-      run();
+    if (textScroll) {
+      setTextScroll();
     }
-  }, [canRun]);
+  }, [textScroll]);
 
-  return { canRun, run };
+  return { textScroll, setTextScroll };
 };
 
-function setTextEffect() {
+function updateTextEffect() {
   const callback = (node: any, isIntersecting: boolean) => {
     let el = node.firstChild;
     if (isIntersecting) {
@@ -36,12 +37,12 @@ function setTextEffect() {
 
   const o = Observer().create({ callback, offset: 0 });
 
-  let texts = document.querySelectorAll(".split-wrapper");
+  let texts = document.querySelectorAll(`.${WRAPPER_TEXT_SPLIT}`);
 
   texts.forEach((text) => o.observe(text));
 }
 
-function setScrollHoverEffect() {
+function updateScrollHoverEffect() {
   const scroller = new Scroller();
   const hover = new Hover();
 
