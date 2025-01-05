@@ -6,7 +6,8 @@ import { useEffect } from "react";
 import { isMobile } from "react-device-detect";
 
 export const useTextScrollEffect = () => {
-  const textScroll = typeof window !== "undefined" && window.IntersectionObserver;
+  const textScroll =
+    typeof window !== "undefined" && window.IntersectionObserver;
 
   function setTextScroll() {
     setTimeout(() => {

@@ -86,7 +86,8 @@ export class Hover {
     this.mouse.target.y = lerp(this.mouse.target.y, this.mouse.current.y, 0.1);
     this.mouse.target.r = lerp(this.mouse.target.r, this.mouse.current.r, 0.1);
     const size = 18;
-    this.crsr.style.transform = `matrix(${this.mouse.target.r}, 0, 0, ${this.mouse.target.r
-      }, ${this.mouse.target.x - size}, ${this.mouse.target.y - size})`;
+    this.crsr.style.transform = `matrix(${this.mouse.target.r}, 0, 0, ${
+      this.mouse.target.r
+    }, ${this.mouse.target.x - size}, ${this.mouse.target.y - size})`;
   }
 }

@@ -12,10 +12,12 @@ export function WrapperTextScroll({ children }: CommonsProps) {
   }
 
   return (
-    <div className={cn(
-      'lg:h-screen lg:w-full lg:max-w-[100vw] lg:overflow-y-hidden lg:fixed lg:left-0',
-      'min-h-screen w-full max-w-[100vw] overflow-y-auto'
-    )}>
+    <div
+      className={cn(
+        "lg:fixed lg:left-0 lg:h-screen lg:w-full lg:max-w-[100vw] lg:overflow-y-hidden",
+        "min-h-screen w-full max-w-[100vw] overflow-y-auto",
+      )}
+    >
       <div id={SCROLL_CONTENT_ID}>{children}</div>
     </div>
   );

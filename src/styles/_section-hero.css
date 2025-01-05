@@ -41,8 +41,6 @@ section.hero .source {
   grid-area: 2 / 6 / 9 / 12;
 }
 
-
-
 @media screen and (max-width: 960px) {
   section.hero {
     margin-bottom: 12.5vh;

@@ -1,4 +1,3 @@
-
 import FadeIn from "@ui/fade-in";
 import { HeroModel } from "@models/hero-model";
 import { WrapperText } from "@ui/wrapper-text";
@@ -10,7 +9,6 @@ export default function ContentHero({
   description,
   src,
 }: HeroModel) {
-
   return (
     <section className="hero">
       <p className="content">
@@ -40,6 +38,10 @@ export default function ContentHero({
 }
 
 function Source({ src }: { src: string }) {
-  const values = { className: "h-auto w-full mt-[-10%]", src }
-  return isVideoFile(src) ? <video {...values} autoPlay muted loop /> : <img {...values} />
+  const values = { className: "h-auto w-full mt-[-10%]", src };
+  return isVideoFile(src) ? (
+    <video {...values} autoPlay muted loop />
+  ) : (
+    <img {...values} />
+  );
 }

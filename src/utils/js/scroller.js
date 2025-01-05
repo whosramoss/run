@@ -13,7 +13,7 @@ export class Scroller {
     this.scrollContent = document.getElementById(SCROLL_CONTENT_ID);
     this.body.style.height = `${this.scrollContent.scrollHeight}px`;
 
-    this.observe();
+    //  this.observe();
     this.listen();
     this.scrollspy();
   }
@@ -44,7 +44,7 @@ export class Scroller {
       },
     );
 
-    window.addEventListener("resize", () => {}, { passive: true });
+    window.addEventListener("resize", () => { }, { passive: true });
   }
 
   scrollspy() {

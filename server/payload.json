@@ -4,11 +4,7 @@
       "id": "hero",
       "component": "section-hero",
       "content": {
-        "title": [
-          "RUNNING",
-          "FREES THE",
-          "MIND"
-        ],
+        "title": ["RUNNING", "FREES THE", "MIND"],
         "src": "/assets/run_video.mp4",
         "subtitle": [
           "Running is more than",

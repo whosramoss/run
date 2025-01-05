@@ -4,7 +4,7 @@ import ms from "ms";
 
 export const SCROLL_CONTENT_ID = "scroll-content";
 export const WRAPPER_TEXT_SPLIT = "split-wrapper";
-export const msDelay = 1000
+export const msDelay = 1000;
 
 export const capitalize = (str: string) => {
   if (!str || typeof str !== "string") return str;
@@ -22,8 +22,9 @@ export const cn = (...inputs: ClassValue[]) => {
 
 export const timeAgo = (timestamp: Date, timeOnly?: boolean): string => {
   if (!timestamp) return "never";
-  return `${ms(Date.now() - new Date(timestamp).getTime())}${timeOnly ? "" : " ago"
-    }`;
+  return `${ms(Date.now() - new Date(timestamp).getTime())}${
+    timeOnly ? "" : " ago"
+  }`;
 };
 
 export const lerp = (start: number, end: number, amt: number) => {
@@ -31,8 +32,8 @@ export const lerp = (start: number, end: number, amt: number) => {
 };
 
 export const isVideoFile = (fileName: string) => {
-  return fileName.includes('.mp4')
-}
+  return fileName.includes(".mp4");
+};
 
 export interface CommonsProps {
   className?: string;

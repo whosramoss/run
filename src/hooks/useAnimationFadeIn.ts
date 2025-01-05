@@ -13,8 +13,8 @@ interface FadeInResponse {
   animateRef: (node?: Element | null | undefined) => void;
   animate: AnimationProps["animate"];
   initial: string;
-  setDelayVariant: (props: DelayVariant) => any
-};
+  setDelayVariant: (props: DelayVariant) => any;
+}
 
 export const useAnimationFadeIn = (
   threshold = 0,
@@ -31,8 +31,8 @@ export const useAnimationFadeIn = (
   const setDelayVariant = ({
     delay = 0,
     duration = 1,
-    y = '2em',
-    hasStaggerChildren = false
+    y = "2em",
+    hasStaggerChildren = false,
   }: DelayVariant) => {
     if (hasStaggerChildren) {
       return {
@@ -58,7 +58,7 @@ export const useAnimationFadeIn = (
         },
       },
     };
-  }
+  };
 
   useEffect(() => {
     animate.start(inView ? firstState : secondState);

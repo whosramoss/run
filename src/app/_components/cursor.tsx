@@ -1,6 +1,6 @@
-"use client"
-import { msDelay } from '@utils/utils';
-import React, { useEffect, useRef } from 'react';
+"use client";
+import { msDelay } from "@utils/utils";
+import React, { useEffect, useRef } from "react";
 
 export default function Cursor() {
   const cursorRef = useRef<HTMLDivElement | null>(null);
@@ -8,7 +8,7 @@ export default function Cursor() {
   useEffect(() => {
     const timer = setTimeout(() => {
       if (cursorRef.current) {
-        cursorRef.current.style.visibility = 'visible';
+        cursorRef.current.style.visibility = "visible";
       }
     }, msDelay);
 
@@ -20,8 +20,7 @@ export default function Cursor() {
       ref={cursorRef}
       className="cursor"
       id="cursor"
-      style={{ visibility: 'hidden' }}
+      style={{ visibility: "hidden" }}
     ></div>
   );
-};
-
+}
