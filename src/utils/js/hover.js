@@ -61,7 +61,7 @@ export class Hover {
     );
 
     window.addEventListener("mousedown", (event) => {
-      this.setCurrentMouse(1);
+      this.setCurrentMouse(1.3);
       this.removeCursorHoverClass();
     });
 
@@ -71,7 +71,7 @@ export class Hover {
 
     this.links.forEach((link) => {
       link.addEventListener("mouseenter", () => {
-        this.setCurrentMouse(1);
+        this.setCurrentMouse(1.3);
         this.addCursorHoverClass();
       });
       link.addEventListener("mouseleave", () => {
@@ -85,9 +85,8 @@ export class Hover {
     this.mouse.target.x = lerp(this.mouse.target.x, this.mouse.current.x, 0.1);
     this.mouse.target.y = lerp(this.mouse.target.y, this.mouse.current.y, 0.1);
     this.mouse.target.r = lerp(this.mouse.target.r, this.mouse.current.r, 0.1);
-    const size = 48;
-    this.crsr.style.transform = `matrix(${this.mouse.target.r}, 0, 0, ${
-      this.mouse.target.r
-    }, ${this.mouse.target.x - size}, ${this.mouse.target.y - size})`;
+    const size = 18;
+    this.crsr.style.transform = `matrix(${this.mouse.target.r}, 0, 0, ${this.mouse.target.r
+      }, ${this.mouse.target.x - size}, ${this.mouse.target.y - size})`;
   }
 }

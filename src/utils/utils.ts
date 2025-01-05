@@ -30,6 +30,10 @@ export const lerp = (start: number, end: number, amt: number) => {
   return (1 - amt) * start + amt * end;
 };
 
+export const isVideoFile = (fileName: string) => {
+  return fileName.includes('.mp4')
+}
+
 export interface CommonsProps {
   className?: string;
   children?: React.ReactNode;

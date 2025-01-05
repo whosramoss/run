@@ -31,10 +31,7 @@ section.motivation .item-3 {
   grid-area: 3 / 8 / 3 / 11;
 }
 
-section.motivation .image-container img {
-  width: 125%;
-  will-change: transform;
-}
+
 
 @media screen and (max-width: 960px) {
   section.motivation {

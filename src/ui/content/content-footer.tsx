@@ -5,7 +5,7 @@ export default function ContentFooter({ name, mission, links }: FooterModel) {
   return (
     <footer>
       <div className="name">
-        <h1 className="strong">{name}</h1>
+        <h1 className="text-secondary">{name}</h1>
       </div>
       <div className="mission">
         <h6>{mission}</h6>

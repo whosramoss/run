@@ -15,7 +15,7 @@ export function WrapperTextSplit({
     const parts = (children as string).split(/\*(.*?)\*/);
     return parts.map((part, index) =>
       part && index % 2 === 1 ? (
-        <span key={index} className="strong">
+        <span key={index} className="secondary">
           {part}
         </span>
       ) : (

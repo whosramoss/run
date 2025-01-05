@@ -1,3 +1,4 @@
+@import url("./_cursor");
 @import url("./_footer");
 @import url("./_navbar");
 @import url("./_section-health");
@@ -43,78 +44,7 @@
   @apply bg-black text-primary;
 }
 
-.image-container {
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.image-container img {
-  height: auto;
-  width: 100%;
-}
-
-.image-container video {
-  height: auto;
-  width: 100%;
-}
-
-.image-container h3 {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  margin-top: 0.5rem;
-  font-weight: 700;
-}
-
-.image-container p {
-  margin-top: 0.5rem;
-}
-
-.image-container button {
-  margin-top: 1rem;
-  font-size: 1.25rem;
-}
-
 .visible {
   transform: translateY(0) skewY(0) !important;
 }
 
-.strong {
-  color: rgba(42, 69, 255, 1);
-}
-
-.cursor {
-  height: 96px;
-  width: 96px;
-  z-index: 99999;
-  background: var(--secondary);
-  position: fixed;
-  border-radius: 50%;
-  will-change: transform;
-  pointer-events: none;
-  transition: background-color 0.4s ease-in-out;
-}
-
-.cursor::after {
-  position: absolute;
-  content: "run";
-  color: white;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-}
-
-.cursor.hover {
-  background-color: black !important;
-}
-
-.cursor.hover::after {
-  opacity: 1;
-}
-
-@media screen and (max-width: 960px) {
-  .cursor {
-    display: none;
-  }
-}

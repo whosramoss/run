@@ -1,11 +1,16 @@
+
+import FadeIn from "@ui/fade-in";
 import { HeroModel } from "@models/hero-model";
 import { WrapperText } from "@ui/wrapper-text";
+import { isVideoFile } from "@utils/utils";
 
 export default function ContentHero({
   title,
   subtitle,
   description,
+  src,
 }: HeroModel) {
+
   return (
     <section className="hero">
       <p className="content">
@@ -22,10 +27,9 @@ export default function ContentHero({
           <WrapperText.Split key={index}>{value}</WrapperText.Split>
         ))}
       </p>
-      <div className="image-container">
-        <video src="/assets/run_video.mp4" autoPlay muted loop />
-        {/* <img src="/assets/photo3.jpg" /> */}
-      </div>
+      <FadeIn className="source z-0 mt-[10%] max-w-full overflow-hidden">
+        <Source src={src} />
+      </FadeIn>
       <p className="desc">
         {description.map((value, index) => (
           <WrapperText.Split key={index}>{value}</WrapperText.Split>
@@ -33,4 +37,9 @@ export default function ContentHero({
       </p>
     </section>
   );
+}
+
+function Source({ src }: { src: string }) {
+  const values = { className: "h-auto w-full mt-[-10%]", src }
+  return isVideoFile(src) ? <video {...values} autoPlay muted loop /> : <img {...values} />
 }
