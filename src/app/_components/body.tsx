@@ -9,8 +9,8 @@ import React from "react";
 export default function Body() {
   const { data, isLoading, error } =
     useApiFetchFromQuery<ContentApiResponseModel>({
-      url: "/api/content",
-      key: "content",
+      url: "/api/run",
+      key: "run",
     });
 
   if (error) {
