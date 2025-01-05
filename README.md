@@ -25,7 +25,7 @@
 
 
 
-## How to install ⚡
+## How to install 
 
 ```bash
   # Clone the project
@@ -41,7 +41,7 @@
   npm run dev
 ```
 
-## How to build ⚡
+## How to build
 - Before generating the build, don't forget to update the [metadata](./src/shared/meta.ts) file and set ```isLocalMetadata = false```.
 - To generate a static compilation, the [next.config.mjs](./next.config.mjs) file must have the object below :
 ```bash
@@ -57,15 +57,15 @@ const staticbuild = {
 ```
 
 
-## Contributing 📄
+## Contributing 
 If you want to contribute to `run`, please make sure to review the [contribution guidelines](https://github.com/whosramoss/run/blob/master/CONTRIBUTING.md). This project makes use of [GitHub issues](https://github.com/whosramoss/run/issues) for
 tracking requests and bugs.
 
-## License 📄
+## License 
 
 MIT License. [LICENSE](./LICENSE)
 
-## Author ✍️
+## Author 
 
 Gabriel Ramos ([@whosramoss](https://github.com/whosramoss))
 

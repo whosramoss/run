@@ -1,0 +1,49 @@
+@import url("./_cursor");
+@import url("./_footer");
+@import url("./_navbar");
+@import url("./_section-health");
+@import url("./_section-hero");
+@import url("./_section-motivation");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-size: 1rem;
+    line-height: calc(2px + 1.1rem + 2px);
+    scroll-behavior: smooth;
+    color: #000;
+    text-rendering: optimizeLegibility;
+    cursor: default;
+    --primary: #e5e5e5;
+    --secondary: #2945ff;
+    --third: #045c14;
+    --black: #000;
+  }
+}
+
+@layer base {
+  html {
+    @apply font-medium;
+  }
+}
+
+*,
+*::after,
+*::before {
+  @apply m-0 box-border p-0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  @apply bg-black text-primary;
+}
+
+.visible {
+  transform: translateY(0) skewY(0) !important;
+}

@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -23,27 +19,14 @@
     ],
     "baseUrl": "./",
     "paths": {
-      "@styles/*": [
-        "src/client/styles/*"
-      ],
-      "@components/*": [
-        "src/client/components/*"
-      ],
-      "@hooks/*": [
-        "src/client/hooks/*"
-      ],
-      "@providers/*": [
-        "src/client/providers/*"
-      ],
-      "@schemas/*": [
-        "src/server/schemas/*"
-      ],
-      "@services/*": [
-        "src/server/services/*"
-      ],
-      "@shared/*": [
-        "src/shared/*"
-      ]
+      "@app/*": ["src/app/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@models/*": ["src/models/*"],
+      "@providers/*": ["src/providers/*"],
+      "@styles/*": ["src/styles/*"],
+      "@ui/*": ["src/ui/*"],
+      "@utils/*": ["src/utils/*"],
+      "@server/*": ["server/*"]
     }
   },
   "include": [
@@ -51,9 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "build/types/**/*.ts",
+    "build/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

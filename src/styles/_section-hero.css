@@ -1,0 +1,62 @@
+section.hero {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 20vh;
+  display: grid;
+  grid-template-columns: 1rem repeat(10, 1fr) 1rem;
+  grid-template-rows: 1rem repeat(9, 10%) 1rem;
+}
+
+section.hero .content {
+  grid-area: 3 / 2 / 8 / 9;
+  font-size: calc(1rem + 2vw);
+  line-height: 1;
+  z-index: 1;
+}
+
+section.hero .content .head {
+  line-height: 0.8;
+  font-size: 6rem;
+  letter-spacing: -7px;
+  color: var(--secondary);
+}
+
+section.hero .content .last {
+  margin-bottom: 2rem;
+}
+
+section.hero .content .cta {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+section.hero .desc {
+  grid-area: 9/4/11/11;
+  z-index: 2;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+section.hero .source {
+  grid-area: 2 / 6 / 9 / 12;
+}
+
+@media screen and (max-width: 960px) {
+  section.hero {
+    margin-bottom: 12.5vh;
+  }
+
+  section.hero .content {
+    grid-area: 6 / 2 / 11 / 12;
+    font-size: 1.15rem;
+  }
+
+  section.hero .content .head {
+    font-size: 4rem;
+    letter-spacing: -5px;
+  }
+
+  section.hero .desc {
+    display: none;
+  }
+}
