@@ -1,4 +1,3 @@
-
 main .hero {
   min-height: 100vh;
   width: 100%;
@@ -52,13 +51,11 @@ main .hero .image-container video {
   margin-top: -10%;
 }
 
-
-
 @media screen and (max-width: 960px) {
   main .hero {
     margin-bottom: 12.5vh;
   }
-  
+
   main .hero .content {
     grid-area: 6 / 2 / 11 / 12;
     font-size: 1.15rem;
@@ -72,5 +69,4 @@ main .hero .image-container video {
   main .hero .desc {
     display: none;
   }
-
 }

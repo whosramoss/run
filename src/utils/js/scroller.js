@@ -44,7 +44,7 @@ export class Scroller {
       },
     );
 
-    window.addEventListener("resize", () => { }, { passive: true });
+    window.addEventListener("resize", () => {}, { passive: true });
   }
 
   scrollspy() {

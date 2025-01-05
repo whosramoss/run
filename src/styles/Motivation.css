@@ -1,4 +1,3 @@
-
 section.motivation {
   min-height: 100vh;
   display: grid;
@@ -37,7 +36,6 @@ section.motivation .image-container img {
   will-change: transform;
 }
 
-
 @media screen and (max-width: 960px) {
   section.motivation {
     grid-gap: 0;
@@ -67,6 +65,4 @@ section.motivation .image-container img {
   section.motivation .item-3 {
     grid-area: 5 / 2 / 5 / 3;
   }
-
-
 }

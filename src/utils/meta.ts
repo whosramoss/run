@@ -1,7 +1,7 @@
 const isLocalMetadata = true;
 const META_URL = "https://run.whosramoss.com/";
 
-export const META_IMAGE_PATH = isLocalMetadata ? './' : META_URL;
+export const META_IMAGE_PATH = isLocalMetadata ? "./" : META_URL;
 
 const META_DESCRIPTION = `Running frees the mind`;
 const META_LOCALE = "en";
@@ -18,23 +18,47 @@ const openDefaultMetada = {
     description: META_DESCRIPTION,
     generator: "Next.JS",
     category: "run",
-    keywords: [
-      "run",
-      "motivation",
-      "health",
-    ],
+    keywords: ["run", "motivation", "health"],
     alternates: {
       canonical: META_URL,
     },
     manifest: `${META_URL}manifest.json`,
     icons: [
-      { rel: 'shortcut icon', type: "image/x-icon", url: `${META_BASE}favicon.ico` },
-      { rel: 'icon', type: "image/x-icon", url: `${META_BASE}favicon.ico` },
-      { rel: 'icon', type: "image/png", url: `${META_BASE}favicon-32x32.png`, sizes: "32x32" },
-      { rel: 'icon', type: "image/png", url: `${META_BASE}favicon-16x16.png`, sizes: "16x16", },
-      { rel: 'icon', type: "image/png", url: `${META_BASE}android-chrome-192x192.png`, sizes: "192x192" },
-      { rel: 'icon', type: "image/png", url: `${META_BASE}android-chrome-512x512.png`, sizes: "512x512" },
-      { rel: 'apple-touch-icon', url: `${META_BASE}apple-touch-icon.png`, sizes: "180x180", },
+      {
+        rel: "shortcut icon",
+        type: "image/x-icon",
+        url: `${META_BASE}favicon.ico`,
+      },
+      { rel: "icon", type: "image/x-icon", url: `${META_BASE}favicon.ico` },
+      {
+        rel: "icon",
+        type: "image/png",
+        url: `${META_BASE}favicon-32x32.png`,
+        sizes: "32x32",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        url: `${META_BASE}favicon-16x16.png`,
+        sizes: "16x16",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        url: `${META_BASE}android-chrome-192x192.png`,
+        sizes: "192x192",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        url: `${META_BASE}android-chrome-512x512.png`,
+        sizes: "512x512",
+      },
+      {
+        rel: "apple-touch-icon",
+        url: `${META_BASE}apple-touch-icon.png`,
+        sizes: "180x180",
+      },
     ],
   },
   robots: {
@@ -78,11 +102,13 @@ const openDefaultMetada = {
   },
 };
 
-export const baseMetadata = isLocalMetadata ? {
-  ...openDefaultMetada.default,
-  ...openDefaultMetada.robots,
-} : {
-  ...openDefaultMetada.default,
-  ...openDefaultMetada.robots,
-  ...openDefaultMetada.graph
-};
+export const baseMetadata = isLocalMetadata
+  ? {
+      ...openDefaultMetada.default,
+      ...openDefaultMetada.robots,
+    }
+  : {
+      ...openDefaultMetada.default,
+      ...openDefaultMetada.robots,
+      ...openDefaultMetada.graph,
+    };

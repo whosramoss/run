@@ -12,17 +12,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(
-        "max-w-[100vw] overflow-x-hidden bg-primary",
-        fontQuestrial.className,
-      )}>
-        <div className="cursor" id="cursor" />
-        <AppProvider>
-          {children}
-        </AppProvider>
+      <body
+        className={cn(
+          "max-w-[100vw] overflow-x-hidden bg-primary",
+          fontQuestrial.className,
+        )}
+      >
+        <AppProvider>{children}</AppProvider>
       </body>
     </html>
   );

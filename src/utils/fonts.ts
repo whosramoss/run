@@ -5,4 +5,3 @@ export const fontQuestrial = Questrial({
   display: "block",
   weight: ["400"],
 });
-

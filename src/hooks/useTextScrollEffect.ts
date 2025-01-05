@@ -4,8 +4,8 @@ import { Scroller } from "@utils/js/scroller";
 import { useEffect } from "react";
 import { isMobile } from "react-device-detect";
 
-export default function useTextScrollEffect() {
-  const canRun = typeof window !== 'undefined' && window.IntersectionObserver;
+export const useTextScrollEffect = () => {
+  const canRun = typeof window !== "undefined" && window.IntersectionObserver;
 
   function run() {
     setTimeout(() => {
@@ -17,12 +17,12 @@ export default function useTextScrollEffect() {
 
   useEffect(() => {
     if (canRun) {
-      run()
+      run();
     }
   }, [canRun]);
 
   return { canRun, run };
-}
+};
 
 function setTextEffect() {
   const callback = (node: any, isIntersecting: boolean) => {

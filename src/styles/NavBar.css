@@ -1,4 +1,3 @@
-
 nav {
   z-index: 999;
   position: fixed;
@@ -21,7 +20,6 @@ nav .health {
   font-size: 1.5rem;
   border: 2px solid black;
   border-right: 0;
-
 }
 
 nav .brand {
@@ -31,7 +29,7 @@ nav .brand {
   letter-spacing: -2px;
   font-size: 3rem;
   font-weight: 800;
-  color:var(--secondary)
+  color: var(--secondary);
 }
 
 nav .date {
@@ -44,7 +42,6 @@ nav .health {
   grid-area: health;
   justify-content: center;
 }
-
 
 @media screen and (max-width: 960px) {
   nav .date,

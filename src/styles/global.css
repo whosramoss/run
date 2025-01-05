@@ -1,9 +1,9 @@
-@import url('./Footer');
-@import url('./Health');
-@import url('./Hero');
-@import url('./Motivation');
-@import url('./NavBar');
-@import url('./SplitWrapper');
+@import url("./Footer");
+@import url("./Health");
+@import url("./Hero");
+@import url("./Motivation");
+@import url("./NavBar");
+@import url("./SplitWrapper");
 
 @tailwind base;
 @tailwind components;
@@ -17,10 +17,10 @@
     color: #000;
     text-rendering: optimizeLegibility;
     cursor: default;
-    --primary: #E5E5E5;
+    --primary: #e5e5e5;
     --secondary: #2945ff;
     --third: #045c14;
-    --black:#000;
+    --black: #000;
   }
 }
 
@@ -28,26 +28,21 @@
   html {
     @apply font-medium;
   }
-
 }
 
 *,
 *::after,
 *::before {
-  @apply box-border m-0 p-0;
+  @apply m-0 box-border p-0;
 }
-
 
 ::-webkit-scrollbar {
   display: none;
 }
 
-
 ::selection {
-  @apply text-primary bg-black;
+  @apply bg-black text-primary;
 }
-
-
 
 .scroll-wrapper {
   height: 100vh;
@@ -131,7 +126,6 @@
 .cursor.hover::after {
   opacity: 1;
 }
-
 
 @media screen and (max-width: 960px) {
   .scroll-wrapper {

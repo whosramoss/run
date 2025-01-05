@@ -1,18 +1,10 @@
-import SplitWrapper from "@ui/SplitWrapper";
+import { MotivationModel } from "@models/motivation-model";
+import { WrapperText } from "@ui/wrapper-text";
 
-interface MotivationProps {
-  title: string;
-  lst: {
-    src: string;
-    title: string;
-    subtitle: string;
-  }[]
-}
-
-export function Motivation({ title, lst }: MotivationProps) {
+export default function ContentMotivation({ title, lst }: MotivationModel) {
   return (
     <section className="motivation">
-      <SplitWrapper text={title} isHead />
+      <WrapperText.Split isHead>{title}</WrapperText.Split>
       {lst.map((value, index) => (
         <div key={index} className={`item-${index + 1}`}>
           <div className="image-container">
@@ -24,4 +16,4 @@ export function Motivation({ title, lst }: MotivationProps) {
       ))}
     </section>
   );
-};
+}

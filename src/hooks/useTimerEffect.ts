@@ -1,7 +1,7 @@
 import { isMobile } from "react-device-detect";
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
-export default function useTimerEffect() {
+export const useTimerEffect = () => {
   const dateRef = useRef<HTMLElement | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -17,7 +17,9 @@ export default function useTimerEffect() {
       let ss = d.getSeconds();
 
       if (dateRef.current) {
-        dateRef.current.innerText = `${checker(hh)}:${checker(mm)}:${checker(ss)}`;
+        dateRef.current.innerText = `${checker(hh)}:${checker(mm)}:${checker(
+          ss,
+        )}`;
       }
 
       timerRef.current = setTimeout(updateTimer, 1000);
@@ -33,4 +35,4 @@ export default function useTimerEffect() {
   }, [isMobile]);
 
   return dateRef;
-}
+};
