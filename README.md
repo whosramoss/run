@@ -1,5 +1,5 @@
 <a href="https://github.com/whosramoss/run">
-  <img alt="run" src="./public/run-thumbnail.png" />
+  <img alt="run" src="./public/thumbnail.png" />
   <h1 align="center">RUN</h1>
 </a>
 
