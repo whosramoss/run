@@ -2,8 +2,8 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "run",
-    short_name: "run",
+    name: "RUN",
+    short_name: "RUN",
     display: "standalone",
     background_color: "#FFFFFF",
     theme_color: "#FFFFFF",
